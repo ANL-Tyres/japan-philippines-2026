@@ -10,7 +10,7 @@ export const DAILY_PLAN = [
       { day: "Day 1", date: "Thu 2 Jul", title: "Arrival", items: [
         { time: "17:40", activity: "Land Narita — JQ9", type: "locked", note: "Ref ETZ49I" },
         { time: "18:00", activity: "Suica ready on iPhone Wallet", type: "locked", note: "Set up early — both phones loaded and ready, no action needed on arrival" },
-        { time: "19:30", activity: "Check in to Shinjuku Airbnb — self check-in via key safe", type: "todo", note: "HM8YXW3WHS · 2 Chome-20 Hyakunincho · Host Yumi +81 80-7657-3699 · ID copies + date confirmation requested by host — respond before arrival" },
+        { time: "19:30", activity: "Check in to Shinjuku Airbnb — self check-in via key safe", type: "locked", note: "HM8YXW3WHS · 2 Chome-20 Hyakunincho · Host Yumi +81 80-7657-3699 · ID copies + date confirmation sent — fully ready" },
         { time: "20:00", activity: "Dinner near hotel", type: "suggested" },
         { time: "21:30", activity: "Early night — recover from travel", type: "suggested" },
       ]},
@@ -201,7 +201,6 @@ export const TRIP_DATA = {
     { item: "Kyoto accommodation (8-10 Jul)", urgency: "urgent", when: "This week", cost: "~$280-360", notes: "2 nights. July peak season — Gion fills fast. Gion / Higashiyama area recommended." },
     { item: "Hiroshima accommodation (10-12 Jul)", urgency: "urgent", when: "This week", cost: "~$250-350", notes: "2 nights. Walking distance to Peace Park strongly recommended." },
     { item: "Osaka accommodation (12-14 Jul)", urgency: "urgent", when: "This week", cost: "~$250-350", notes: "2 nights. Dotonbori / Namba area. Late checkout useful — KIX flight not until 22:25." },
-    { item: "Respond to Shinjuku Airbnb host — ID + dates", urgency: "high", when: "ASAP", cost: "—", notes: "Host emailed requesting ID copies and date confirmation before arrival. Ref HM8YXW3WHS. Standard pre-arrival verification — respond promptly to avoid check-in delays." },
     { item: "Contact Henann re: bed type", urgency: "high", when: "This week", cost: "—", notes: "Booking shows 2 Twin Beds. Request double/queen. Ph: +63-362886111. Ref QA62J4ANR." },
     { item: "Kathmandu — Flight pants x2", urgency: "high", when: "Before departure", cost: "~$150-200", notes: "Replace jeans. Check rain shells too." },
     { item: "Aldi — Merino tops + underwear", urgency: "high", when: "Before departure", cost: "~$80-100", notes: "3-4 merino tees each + merino boxers. Stock confirmed in store. Sizing runs small." },
