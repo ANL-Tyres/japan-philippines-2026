@@ -97,10 +97,10 @@ export const DAILY_PLAN = [
   },
   {
     leg: "Hiroshima", icon: "🕊️", dates: "10–12 Jul", nights: 2,
-    accommodation: "Hotel Vista Hiroshima · Ref 5330.082.160 · PIN 2192 · Near Peace Memorial Park (~21 min walk) · No prepayment — pay at property",
+    accommodation: "Hotel Vista Hiroshima · Ref 5330.082.160 · PIN 2192 · PAID IN FULL ¥32,632 · Near Peace Memorial Park (~21 min walk)",
     days: [
       { day: "Day 9 cont.", date: "Fri 10 Jul", title: "Arrive Hiroshima", items: [
-        { time: "Afternoon", activity: "Arrive Hiroshima — check in", type: "locked", note: "Ref 5330.082.160 · PIN 2192 · Check-in 15:00-00:00 · Approx arrival flagged 15:00-16:00" },
+        { time: "Afternoon", activity: "Arrive Hiroshima — check in", type: "locked", note: "Ref 5330.082.160 · PIN 2192 · Check-in 15:00-00:00 · Approx arrival flagged 15:00-16:00 · Paid in full" },
         { time: "Late afternoon", activity: "Peace Memorial Park — first visit at dusk, Atomic Bomb Dome", type: "suggested" },
         { time: "Evening", activity: "Oysters for dinner — Hiroshima specialty", type: "agreed" },
       ]},
@@ -113,7 +113,7 @@ export const DAILY_PLAN = [
         { time: "Evening", activity: "Ferry back to Hiroshima, oysters for dinner", type: "agreed" },
       ]},
       { day: "Day 11", date: "Sun 12 Jul", title: "Depart for Osaka", items: [
-        { time: "Morning", activity: "Check out by 11:00 — Hotel Vista Hiroshima", type: "todo", note: "No prepayment — pay ¥32,632 at property on checkout" },
+        { time: "Morning", activity: "Check out by 11:00 — Hotel Vista Hiroshima", type: "todo", note: "Paid in full — nothing owed at checkout" },
         { time: "Late morning", activity: "Shinkansen Hiroshima to Shin-Osaka (~$197 for two, buy at station)", type: "todo" },
       ]},
     ],
@@ -188,7 +188,7 @@ export const TRIP_DATA = {
     { ref: "DIB090", date: "22 Jul 21:35", detail: "MNL to SYD (PR211 Philippine Airlines)", cost: "80k pts", status: "locked" },
     { ref: "HM8YXW3WHS", date: "2-6 Jul", detail: "Tokyo Airbnb — Shinjuku 4 nights · Host Yumi · Self check-in", cost: "$572.97", status: "locked" },
     { ref: "5191517143", date: "6-8 Jul", detail: "Centurion Hakone Bettei — 2 nights · PAID IN FULL ¥112,000 · PIN 8888 · Sukiyaki dinner + breakfast · Open-air bath", cost: "¥112,000", status: "locked" },
-    { ref: "5330.082.160", date: "10-12 Jul", detail: "Hotel Vista Hiroshima — 2 nights · Moderate Double Room · PIN 2192 · No prepayment, pay at property", cost: "¥32,632", status: "locked" },
+    { ref: "5330.082.160", date: "10-12 Jul", detail: "Hotel Vista Hiroshima — 2 nights · Moderate Double Room · PIN 2192 · PAID IN FULL", cost: "¥32,632", status: "locked" },
     { ref: "6091.751.149", date: "12-14 Jul", detail: "Shizutetsu Hotel Prezio Osaka Shinsaibashi — 2 nights · Double Room · PIN 7186 · No prepayment, pay at property", cost: "¥20,028", status: "locked" },
     { ref: "QA62J4ANR", date: "15-21 Jul", detail: "Henann Regency Boracay — 6 nights · Superior Room · Breakfast incl", cost: "94,807 pts", status: "locked" },
     { ref: "QA39ZC2AJ", date: "21-22 Jul", detail: "Belmont Hotel Manila — 1 night · Standard Queen · Breakfast incl", cost: "$151.05", status: "locked" },
@@ -219,7 +219,7 @@ export const TRIP_DATA = {
     { item: "Digital Hakone Freepass 2-day", status: "done", cost: "~$127", notes: "ZPS305093 PAID · Share to Leah when Klook unlocks closer to 6 Jul" },
     { item: "Romancecar Hakone 71", status: "done", cost: "AUD $22.96", notes: "XBZ479551 PAID · Car 4 · Seat 14A (Andrew) + 14B (Leah) · Show confirmation email + Freepass to board" },
     { item: "Centurion Hakone Bettei", status: "done", cost: "¥112,000", notes: "Ref 5191517143 · PIN 8888 · Paid in full · Bags can be dropped on arrival, held until check-in" },
-    { item: "Hotel Vista Hiroshima", status: "done", cost: "¥32,632", notes: "Ref 5330.082.160 · PIN 2192 · No prepayment — pay at property · Free cancellation until 3 Jul" },
+    { item: "Hotel Vista Hiroshima", status: "done", cost: "¥32,632", notes: "Ref 5330.082.160 · PIN 2192 · PAID IN FULL — nothing owed at checkout" },
     { item: "Shizutetsu Hotel Prezio Osaka", status: "done", cost: "¥20,028", notes: "Ref 6091.751.149 · PIN 7186 · No prepayment — pay at property on checkout · Free cancellation until 9 Jul" },
     { item: "Street Kart Tokyo Bay — go-karts", status: "done", cost: "Viator", notes: "Ref 1413786433 · 5 Jul 19:00 · 2hr tour · Tokyo Bay shop · IDP required — NRMA Monday 29 Jun" },
     { item: "Suica — iPhone Wallet (both phones)", status: "done", cost: "—", notes: "Set up early, ready to go — no need to wait until Narita" },
@@ -249,7 +249,7 @@ export const TRIP_DATA = {
     { item: "Hoka Clifton 10 (paid)", cost: "~$220", status: "paid" },
     { item: "Tokyo Airbnb — 4 nights (paid)", cost: "$572.97", status: "paid" },
     { item: "Centurion Hakone Bettei — 2 nights (paid in full)", cost: "¥112,000", status: "paid" },
-    { item: "Hotel Vista Hiroshima — 2 nights (pay at property)", cost: "¥32,632", status: "est" },
+    { item: "Hotel Vista Hiroshima — 2 nights (paid in full)", cost: "¥32,632", status: "paid" },
     { item: "Shizutetsu Hotel Prezio Osaka — 2 nights (pay at property)", cost: "¥20,028", status: "est" },
     { item: "Belmont Hotel Manila (paid)", cost: "$151.05", status: "paid" },
     { item: "Digital Hakone Freepass (paid)", cost: "~$127", status: "paid" },
