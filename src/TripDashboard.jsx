@@ -102,9 +102,34 @@ const TabBtn = ({ id, label, active, onClick, alert }) => (
 </button>
 );
 
+// Calculate days until departure dynamically from today's date
+function daysUntilDeparture(departureDateStr) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const departure = new Date(departureDateStr);
+  departure.setHours(0, 0, 0, 0);
+  const diffMs = departure - today;
+  const diffDays = Math.round(diffMs / (1000 * 60 * 60 * 24));
+  return diffDays;
+}
+
 export default function TripDashboard() {
   const [tab, setTab] = useState("dailyplan");
   const urgentCount = TRIP_DATA.todos.filter(t => t.urgency === "urgent").length;
+
+  // Departure date — update this single line if travel dates ever change
+  const departureDate = "2026-07-02";
+  const daysOut = daysUntilDeparture(departureDate);
+  const daysLabel = daysOut > 0 ? `${daysOut} day${daysOut === 1 ? "" : "s"}` : daysOut === 0 ? "Today!" : "In progress";
+
+  // Derive hotel booking status dynamically from DAILY_PLAN — never goes stale
+  const unbookedLegs = DAILY_PLAN.filter(leg => leg.accommodation.startsWith("TBC"));
+  const hotelsLabel = unbookedLegs.length === 0 ? "All booked" : `${unbookedLegs.length} unbooked`;
+  const hotelsOk = unbookedLegs.length === 0;
+
+  // Derive flights booked count dynamically from bookings flagged as flights (by ref pattern matching airline-style codes is fragile,
+  // so we count entries whose detail contains "to" and a flight-like ref — simplest reliable signal is a fixed known count since all 5 are locked)
+  const flightsBooked = TRIP_DATA.bookings.filter(b => /SYD|MNL|KIX|Caticlan|TYO/.test(b.detail) && b.status === "locked").length;
 
   return (
     <div style={{ fontFamily: "system-ui, -apple-system, sans-serif", maxWidth: 700, margin: "0 auto", padding: "0 0 40px" }}>
@@ -116,14 +141,14 @@ export default function TripDashboard() {
           </div>
           <div style={{ textAlign: "right" }}>
             <div style={{ fontSize: 11, opacity: 0.8 }}>Departs in</div>
-            <div style={{ fontSize: 22, fontWeight: 800 }}>10 days</div>
+            <div style={{ fontSize: 22, fontWeight: 800 }}>{daysLabel}</div>
           </div>
         </div>
         <div style={{ display: "flex", gap: 8, marginTop: 14, flexWrap: "wrap" }}>
           {[
-            { label: "Flights", val: "5 booked", ok: true },
+            { label: "Flights", val: `${flightsBooked} booked`, ok: true },
             { label: "Hakone", val: "Confirmed", ok: true },
-            { label: "Hotels", val: "3 unbooked", ok: false },
+            { label: "Hotels", val: hotelsLabel, ok: hotelsOk },
             { label: "Go-karts", val: "Booked", ok: true },
           ].map(s => (
             <div key={s.label} style={{ background: s.ok ? "rgba(255,255,255,0.15)" : "rgba(255,200,0,0.25)", borderRadius: 8, padding: "6px 12px", fontSize: 11 }}>
