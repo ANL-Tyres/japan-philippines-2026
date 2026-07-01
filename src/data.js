@@ -9,10 +9,11 @@ export const DAILY_PLAN = [
     days: [
       { day: "Day 1", date: "Thu 2 Jul", title: "Arrival", items: [
         { time: "17:40", activity: "Land Narita — JQ9", type: "locked", note: "Ref ETZ49I" },
-        { time: "18:00", activity: "Suica ready on iPhone Wallet", type: "locked", note: "Set up early — both phones loaded and ready, no action needed on arrival" },
-        { time: "19:30", activity: "Check in to Shinjuku Airbnb — self check-in via key safe", type: "locked", note: "HM8YXW3WHS · 2 Chome-20 Hyakunincho · Host Yumi +81 80-7657-3699 · ID copies + date confirmation sent — fully ready" },
-        { time: "20:00", activity: "Dinner near hotel", type: "suggested" },
-        { time: "21:30", activity: "Early night — recover from travel", type: "suggested" },
+        { time: "~19:00", activity: "Narita Express (N'EX) to Shinjuku", type: "locked", note: "~90 mins · ¥3,070 per person · Buy at N'EX counter in arrivals · Book oversized baggage space at same time — reserved luggage spot at end of carriage · Pay with Suica or cash" },
+        { time: "~20:30", activity: "Arrive Shinjuku Station — short walk or taxi to Airbnb", type: "todo" },
+        { time: "~21:00", activity: "Check in to Shinjuku Airbnb — self check-in via key safe", type: "locked", note: "HM8YXW3WHS · 2 Chome-20 Hyakunincho · Host Yumi +81 80-7657-3699 · ID copies + date confirmation sent — fully ready" },
+        { time: "~21:30", activity: "Dinner near hotel", type: "suggested" },
+        { time: "Late", activity: "Early night — recover from travel", type: "suggested" },
       ]},
       { day: "Day 2", date: "Fri 3 Jul", title: "teamLab + Yanaka + Golden Gai", items: [
         { time: "7:00am", activity: "Fuglen Tokyo or Eight Coffee — Shinjuku area", type: "agreed" },
@@ -50,7 +51,7 @@ export const DAILY_PLAN = [
     days: [
       { day: "Day 5 cont.", date: "Mon 6 Jul", title: "Arrive Hakone", items: [
         { time: "10:55am", activity: "Arrive Hakone-Yumoto", type: "locked" },
-        { time: "11:30am", activity: "Drop bags at Centurion Hakone Bettei — they'll hold until check-in", type: "locked", note: "Confirmed with property — drop on arrival, return at designated check-in time" },
+        { time: "11:30am", activity: "Drop bags at Centurion Hakone Bettei — they'll hold until check-in", type: "locked", note: "Confirmed with property — drop on arrival, return at designated check-in time · Ryokan runs shuttle from nearby stations — contact them for pickup details" },
         { time: "Afternoon", activity: "Hakone Open Air Museum", type: "locked", note: "Covered by Freepass" },
         { time: "15:00", activity: "Check in Centurion Hakone Bettei", type: "locked", note: "Ref 5191517143 · PIN 8888 · Open-air bath in room · Tatami floors · Paid in full" },
         { time: "Dinner", activity: "Sukiyaki dinner at Centurion Hakone Bettei — included", type: "locked" },
@@ -214,7 +215,7 @@ export const TRIP_DATA = {
     { item: "Leah's NB 1080s", status: "done", cost: "Owned", notes: "Confirmed great for all legs incl Mount Misen — no further action needed" },
     { item: "Digital Hakone Freepass 2-day", status: "done", cost: "~$127", notes: "ZPS305093 PAID, shared and activated for both Andrew and Leah" },
     { item: "Romancecar Hakone 71", status: "done", cost: "AUD $22.96", notes: "XBZ479551 PAID · Car 4 · Seat 14A (Andrew) + 14B (Leah) · Show confirmation email + Freepass to board" },
-    { item: "Centurion Hakone Bettei", status: "done", cost: "¥112,000", notes: "Ref 5191517143 · PIN 8888 · Paid in full · Bags can be dropped on arrival, held until check-in" },
+    { item: "Centurion Hakone Bettei", status: "done", cost: "¥112,000", notes: "Ref 5191517143 · PIN 8888 · Paid in full · Bags can be dropped on arrival, held until check-in · Ryokan runs shuttle from nearby stations" },
     { item: "Nohga Hotel Kiyomizu Kyoto", status: "done", cost: "Paid", notes: "Ref RXS539474 · Queen bed, breakfast incl · Booked via Expedia · Leah's pick — near Gion/Kiyomizu-dera" },
     { item: "Hotel Vista Hiroshima", status: "done", cost: "¥32,632", notes: "Ref 5330.082.160 · PIN 2192 · PAID IN FULL — nothing owed at checkout" },
     { item: "Shizutetsu Hotel Prezio Osaka", status: "done", cost: "¥20,028", notes: "Ref 6091.751.149 · PIN 7186 · No prepayment — pay at property on checkout · Free cancellation until 9 Jul" },
@@ -227,9 +228,10 @@ export const TRIP_DATA = {
     { item: "Japan SIM / eSIM", status: "todo", cost: "~$0-50", notes: "Check 2x free Klook eSIMs first. Buy at Narita if needed." },
   ],
   transport: [
+    { leg: "Narita to Shinjuku", how: "Narita Express (N'EX) · ~90 mins · buy at counter on arrival · book oversized baggage space", cost: "¥3,070 pp (~$50 two)", book: "Buy at Narita arrivals · 2 Jul" },
     { leg: "Tokyo local", how: "Suica card (iPhone Wallet)", cost: "Pay as you go", book: "Ready to go — both set up" },
     { leg: "Tokyo to Hakone", how: "Romancecar Hakone 71 · 09:20 · Car 4 · 14A+14B", cost: "AUD $22.96", book: "PAID — ref XBZ479551" },
-    { leg: "Hakone local", how: "Digital Hakone Freepass 2-day", cost: "~$127", book: "PAID — ref ZPS305093, both activated" },
+    { leg: "Hakone local", how: "Digital Hakone Freepass 2-day + ryokan shuttle from station", cost: "~$127", book: "PAID — ref ZPS305093, both activated" },
     { leg: "Hakone-Yumoto to Odawara", how: "Local train", cost: "~$6", book: "Suica" },
     { leg: "Odawara to Kyoto", how: "Shinkansen Hikari", cost: "~$234 (two)", book: "Buy at station · 8 Jul" },
     { leg: "Kyoto local — Day 8", how: "Train to Saga-Arashiyama Station for bike tour", cost: "~$10 (two)", book: "Suica · 9 Jul" },
@@ -257,6 +259,7 @@ export const TRIP_DATA = {
     { item: "Arashiyama Bike Tour (Kyoto, final payment Wednesday)", cost: "TBC", status: "est" },
     { item: "Kathmandu clothing (paid)", cost: "~$175", status: "paid" },
     { item: "IDP — NRMA (paid)", cost: "~$35", status: "paid" },
+    { item: "Narita Express Day 1", cost: "~$50 (two)", status: "est" },
     { item: "Miyajima ferry + Mount Misen ropeway (optional one-way)", cost: "~$50-70 (two)", status: "est" },
     { item: "Japan transport (remaining — Shinkansen legs + Suica)", cost: "~$500", status: "est" },
     { item: "Japan food ~$60/day x 13", cost: "~$780", status: "est" },
